@@ -1,0 +1,131 @@
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form {
+    padding: 20px;
+}
+
+.auth-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    text-shadow: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.auth-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.auth-link a {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .auth-container {
+        margin: 20px;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #333;
+}
+
+.menu-left {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-left li, .menu-right li {
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+} 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('https://th.bing.com/th/id/R.2e9ddeaae7ba4c93b89cef3c8ea9a89a?rik=fsYmk8IvWCSXDw&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
