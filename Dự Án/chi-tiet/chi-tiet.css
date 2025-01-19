@@ -1,0 +1,267 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('https://th.bing.com/th/id/R.2e9ddeaae7ba4c93b89cef3c8ea9a89a?rik=fsYmk8IvWCSXDw&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.detail-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 3rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Image section */
+.detail-image {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.detail-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.detail-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Content section */
+.detail-content {
+    flex: 1;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.detail-content h1 {
+    color: #FF6B6B;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.price {
+    display: inline-block;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Info section */
+.info-section {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 107, 107, 0.05);
+    border-radius: 15px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #666;
+}
+
+.info-item i {
+    color: #FF6B6B;
+    font-size: 1.2rem;
+}
+
+/* Description and other sections */
+.description, .ingredients, .opening-hours {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 142, 83, 0.05);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.description:hover, .ingredients:hover, .opening-hours:hover {
+    transform: translateY(-5px);
+}
+
+.description h2, .ingredients h2, .opening-hours h2 {
+    color: #FF6B6B;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.description h2::after, .ingredients h2::after, .opening-hours h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    border-radius: 2px;
+}
+
+.description p, .opening-hours p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Ingredients list */
+.ingredients ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients li {
+    padding: 0.8rem 0;
+    color: #666;
+    position: relative;
+    padding-left: 1.8rem;
+    transition: transform 0.2s ease;
+}
+
+.ingredients li:hover {
+    transform: translateX(10px);
+}
+
+.ingredients li::before {
+    content: '•';
+    color: #FF6B6B;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .detail-container {
+        flex-direction: column;
+    }
+
+    .detail-image, .detail-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-container {
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .detail-content {
+        padding: 1.5rem;
+    }
+
+    .detail-content h1 {
+        font-size: 2rem;
+    }
+
+    .info-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #FF8E53, #FF6B6B);
+}
+
+/* Hover effects */
+.detail-content:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.price:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+} 
+/* Menu styles */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #333;
+}
+
+.menu-left {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-left li, .menu-right li {
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+ 
